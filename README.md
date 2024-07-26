@@ -18,7 +18,7 @@ yarn add spring-chain
 
 ## Usage
 
-To use the library, you need to include the script in your HTML file or import it in your JavaScript file. Here is an example of how you can use the library to chain multiple animations together in vanilla JavaScript:
+To use the library, you need to include the script in your HTML file or import `import 'spring-chain'` it in your JavaScript file. Here is an example of how you can use the library to chain multiple animations together in vanilla JavaScript:
 
 ```html
 <!DOCTYPE html>
@@ -56,9 +56,20 @@ To use the library, you need to include the script in your HTML file or import i
         scale: 2, // Scale to 2x
       })
     </script>
-    <script src="springchain.js" type="module"></script>
+    <script src="path/to/springChain.umd.js"></script>
   </body>
 </html>
+```
+
+### Using ES Module Import
+
+Example:
+
+```javascript
+import "spring-chain"
+
+// Use the library function
+document.querySelector("div").motion({ x: 100, y: 100, scale: 1.5 })
 ```
 
 ## API
@@ -94,11 +105,6 @@ const box = document.getElementById("box")
 
 box
   .motion({
-    spring: {
-      stiffness: 20,
-      damping: 5,
-      mass: 1,
-    },
     rotate: 360,
     delay: 500,
   })

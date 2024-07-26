@@ -1,5 +1,5 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "SpringChain is a versatile JavaScript animation library designed to bring your UI elements to life with smooth, physics-based spring animations. Leveraging the power of the Web Animations API and a robust spring physics engine, SpringChain allows developers to create fluid, dynamic animations with ease. Whether you're looking to move, scale, rotate, or perform complex sequences, SpringChain's intuitive chaining mechanism ensures that your animations are both seamless and engaging.",
   "keywords": [
     "JavaScript",
@@ -48,5 +48,8 @@
   },
   "devDependencies": {
     "vite": "^5.3.5"
+  },
+  "dependencies": {
+    "spring-chain": "^1.0.2"
   }
 }
