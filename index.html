@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spring Chain Example</title>
+    <style>
+      .animate-div {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: absolute;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        top: 100px;
+        left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="animate-div"></div>
+    <button id="stop">Stop Animations</button>
+    <button id="start">Continue Animations</button>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const div = document.querySelector(".animate-div")
+        const stopButton = document.getElementById("stop")
+        const start = document.getElementById("start")
+
+        function animate() {
+          // Rotation animation
+          div.motion({
+            spring: {
+              stiffness: 20, // Lower stiffness means more springy
+              damping: 5, // Lower damping means more bouncy
+              mass: 1, // Lower mass means more bouncy
+            },
+            rotate: 360, // Rotate 360 degrees
+            delay: 500, // Delay (x)ms before starting this animation
+          })
+
+          // Scale animation
+          div.motion({
+            spring: {
+              stiffness: 20,
+              damping: 5,
+              mass: 1,
+            },
+            scale: 2, // Scale to 2x
+          })
+
+          // chain animation
+          div
+            .motion({
+              spring: {
+                stiffness: 20, // Lower stiffness means more springy
+                damping: 5, // Lower damping means more bouncy
+                mass: 1, // Lower mass means more bouncy
+              },
+              x: 360, // Move 360px to the right
+            })
+            .motion({
+              spring: {
+                stiffness: 20,
+                damping: 5,
+                mass: 1,
+              },
+              y: 360, // Move 360px down
+            })
+            .motion({
+              scale: 1, // Scale back to 1x
+              rotate: 360, // Rotate 360 degrees
+            })
+            .motion({
+              width: 200, // Increase width to 200px
+              height: 200, // Increase height to 200px
+              backgroundColor: "red", // Change background color to red
+            })
+        }
+
+        animate()
+        stopButton.addEventListener("click", () => {
+          // stop animation
+          div.stopMotion()
+        })
+        start.addEventListener("click", () => {
+          // start animation
+          animate()
+        })
+      })
+    </script>
+    <script src="./lib/main.js" type="module"></script>
+  </body>
+</html>
