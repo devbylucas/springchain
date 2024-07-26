@@ -85,7 +85,7 @@ box.motion({
 })
 ```
 
-## Chain Animations
+## Chain API
 
 You can chain multiple animations together by calling the `motion` method multiple times. The library will automatically chain the animations together in a Spring-like fashion. Here is an example of how you can chain multiple animations together:
 
