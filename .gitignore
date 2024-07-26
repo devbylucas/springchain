@@ -1,0 +1,28 @@
+# Ignore build output
+build/
+dist/
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+
+# Ignore package manager files
+node_modules/
+yarn.lock
+package-lock.json
+
+# Ignore logs and temporary files
+logs/
+temp/
+
+# Ignore compiled binaries
+*.exe
+*.dll
+
+# Ignore system files
+Thumbs.db
+.DS_Store
+
+# Ignore user-specific files
+*.log
+*.bak
