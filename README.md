@@ -10,10 +10,10 @@ To install the library, you can either download the script from the `dist` folde
 
 ```bash
 # Using npm package manager
-npm install springchain
+npm install spring-chain
 
 # Using yarn package manager
-yarn add springchain
+yarn add spring-chain
 ```
 
 ## Usage
