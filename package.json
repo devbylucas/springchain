@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "description": "SpringChain is a versatile JavaScript animation library designed to bring your UI elements to life with smooth, physics-based spring animations. Leveraging the power of the Web Animations API and a robust spring physics engine, SpringChain allows developers to create fluid, dynamic animations with ease. Whether you're looking to move, scale, rotate, or perform complex sequences, SpringChain's intuitive chaining mechanism ensures that your animations are both seamless and engaging.",
+  "keywords": [
+    "JavaScript",
+    "Animation",
+    "Library",
+    "Spring Physics",
+    "Smooth Animations",
+    "UI Animation",
+    "Web Animations API",
+    "Chained Animations",
+    "Dynamic Animations",
+    "Fluid Motion",
+    "SpringChain",
+    "Elastic Animations",
+    "Physics-based Animations",
+    "Sequence Animations",
+    "Animation Delays",
+    "Animation Queuing"
+  ],
+  "author": "Dev By Lucas",
+  "bugs": {
+    "url": "https://github.com/devbylucas/springchain/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devbylucas/springchain.git"
+  },
+  "homepage": "https://github.com/devbylucas/springchain#readme",
+  "license": "MIT",
+  "name": "spring-chain",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/springChain.umd.js",
+  "module": "./dist/springChain.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/springChain.es.js",
+      "require": "./dist/springChain.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.3.5"
+  }
+}
